@@ -1,6 +1,6 @@
 FROM node:10
 
-COPY [".", "/usr/src/"]
+COPY ["package.json", "package-lock.json", "/usr/src/"]
 
 WORKDIR /usr/src
 
@@ -9,6 +9,8 @@ RUN npm --version
 RUN node -v
 
 RUN npm install
+
+COPY [".", "/usr/src/"]
 
 EXPOSE 3000
 

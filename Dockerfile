@@ -4,11 +4,11 @@ COPY [".", "/usr/src/"]
 
 WORKDIR /usr/src
 
-RUN npm install
-
 RUN npm --version
 
 RUN node -v
+
+RUN npm install
 
 EXPOSE 3000
 
